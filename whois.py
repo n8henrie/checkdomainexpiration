@@ -108,12 +108,14 @@ class NICClient(object) :
                 break
         s.close()
 
+        response = response.decode("utf8")
+
         nhost = None
         if (flags & NICClient.WHOIS_RECURSE and nhost == None):
             nhost = self.findwhois_server(response, hostname)
         if (nhost != None):
             response += self.whois(query, nhost, 0)
-        return response.decode("utf8")
+        return response
 
     def choose_server(self, domain):
         """Choose initial lookup NIC host"""

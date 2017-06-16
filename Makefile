@@ -6,7 +6,7 @@ help:
 
 deps:
 	mkdir -p deps
-	cd deps && wget https://gist.githubusercontent.com/n8henrie/dc55b8fb366710003b5d3c557dfc4469/raw/whois.py
+	cd deps && wget https://gist.githubusercontent.com/n8henrie/dc55b8fb366710003b5d3c557dfc4469/raw/4478029bf8213a0e8fef0cfd662a4a171c6e2aaf/whois.py
 
 publish: deps
 	rm -f index.zip 

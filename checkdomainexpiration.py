@@ -85,5 +85,5 @@ def lambda_handler(event: dict, context: dict) -> None:
         output = format_output(delta=remaining, domain=domain)
 
         print(output)
-        if remaining > datetime.timedelta(30):
+        if remaining < datetime.timedelta(30):
             sns.publish(TopicArn=topic_arn, Message=output)

@@ -11,7 +11,6 @@ deps:
 publish: deps
 	rm -f index.zip 
 	cd deps && zip --recurse-paths ../index.zip ../*.py *
-	cd deps && wget https://gist.githubusercontent.com/n8henrie/dc55b8fb366710003b5d3c557dfc4469/raw
 	aws lambda update-function-code --function-name checkdomainexpiration --zip-file fileb://index.zip
 
 clean-deps:
